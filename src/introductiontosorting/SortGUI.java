@@ -167,7 +167,8 @@ public class SortGUI extends javax.swing.JFrame
         // TODO add your handling code here:
         if ( speedSlider.getValue() > 0 )
         {
-            view.setTimeBetweenSteps( 10.0/speedSlider.getValue() );
+//            view.setTimeBetweenSteps( 10.0/speedSlider.getValue() );
+            view.setTimeBetweenSteps( 1/100 );
         }
         else
         {
