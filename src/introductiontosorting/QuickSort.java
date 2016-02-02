@@ -34,16 +34,16 @@ public class QuickSort extends SortingAlgorithm
         quicksort( arr, 0, arr.length-1 );
     }
     
-    public void quicksort(int[] arr, int low, int high) {
-        if (low < high) {
-            int i = low;
-            for (int j = low; j < high; j++)
-                if (compare(arr, j, high) <= 0) 
-                    swap(arr, i++, j);
-            swap(arr, i, high);
-            int p = i;
-            quicksort(arr, low, p - 1);
-            quicksort(arr, p+1, high);
+    public void quicksort(int[] arr, int LO, int HI) {
+        if (LO < HI) {
+            int L = LO;
+            for (int R = LO; R < HI; R++)
+                if (compare(arr, R, HI) <= 0) 
+                    swap(arr, L++, R);
+            swap(arr, L, HI);
+            int PIVOT = L;
+            quicksort(arr, LO, PIVOT - 1);
+            quicksort(arr, PIVOT+1, HI);
         }
     }
 
